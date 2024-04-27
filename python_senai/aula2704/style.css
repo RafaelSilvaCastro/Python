@@ -1,3 +1,26 @@
+/*
+    Esquemas de cores
+    60, 30, 10
+*/
+
 QWidget{
-    background-color: antiquewhite;
+    background-color: black;
+    color: white;
+    font-family: "Lucida Console";
+}
+
+QLabel{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+QLineEdit{
+    background-color: aliceblue;
+}
+
+QPushButton{
+    background-color: red;
+    font-size: 25px;
+    color: black;
+    border-radius: 10px;
 }

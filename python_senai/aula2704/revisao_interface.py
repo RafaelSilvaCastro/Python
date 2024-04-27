@@ -15,34 +15,33 @@ janela.setWindowTitle("Exemplo Interface")
 #janela.setStyleSheet("background-color: black; color: white; font-family: Lucida Console")
 
 # chamar o css no python
-with open("style.css", "r") as file:
+with open("python_senai/aula2704/style.css", "r") as file:
     app.setStyleSheet(file.read())
     
     
-
-lblNome = QLabel("Exemplo Tela", janela)
+lblNome = QLabel("Cadastro", janela)
 lblNome.move(150, 30)
-lblNome.setStyleSheet("font-size: 20px")
+#lblNome.setStyleSheet("font-size: 20px")
 
 lblLogin = QLabel("Login:", janela)
 lblLogin.move(50, 80)
-lblLogin.setStyleSheet("font-size: 15px")
+#lblLogin.setStyleSheet("font-size: 15px")
 
 txtLogin = QLineEdit("",janela)
 txtLogin.setGeometry(150, 80, 200, 20)
-txtLogin.setStyleSheet("background-color: white")
+#txtLogin.setStyleSheet("background-color: white")
 
 lblSenha = QLabel("Senha:", janela)
 lblSenha.move(50, 150)
-lblSenha.setStyleSheet("font-size: 15px")
+#lblSenha.setStyleSheet("font-size: 15px")
 
 txtSenha = QLineEdit("", janela)
 txtSenha.setGeometry(150, 150, 200, 20)
-txtSenha.setStyleSheet("background-color: white")
+#txtSenha.setStyleSheet("background-color: white")
 
 btnEntrar = QPushButton("Entrar", janela)
 btnEntrar.setGeometry(50, 220, 300, 50)
-btnEntrar.setStyleSheet("background-color: red; font-size: 20px; font-family: arial")
+#btnEntrar.setStyleSheet("background-color: red; font-size: 20px; font-family: arial")
 
 # txt --> se refere a caixas de texto
 # btn --> se refere a botoes
