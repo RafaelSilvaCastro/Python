@@ -7,5 +7,10 @@
 
 def maior(n1,n2,n3):
     maiorNumero = max(n1,n2,n3)
+    return maiorNumero
 
-print(maior(2,3,4))
+n1 = int(input("Digite um numero: "))
+n2 = int(input("Digite um numero: "))
+n3 = int(input("Digite um numero: "))
+
+print(maior(n1,n2,n3))
