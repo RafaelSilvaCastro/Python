@@ -10,37 +10,46 @@ from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QLineEdi
 # criar uma janela 
 app = QApplication(sys.argv)
 janela = QWidget()
-janela.resize(400, 400)
-janela.setWindowTitle("Exemplo Interface")
+janela.resize(400, 430)
+janela.setWindowTitle("Cadastro")
 #janela.setStyleSheet("background-color: black; color: white; font-family: Lucida Console")
 
 # chamar o css no python
-with open("python_senai/aula2704/style.css", "r") as file:
+with open("python_senai/aula2704/exercicio/style.css", "r") as file:
     app.setStyleSheet(file.read())
     
     
-lblNome = QLabel("Cadastro", janela)
-lblNome.move(150, 30)
+lblTitulo = QLabel("Inscreva-se em nossa", janela)
+lblTitulo.move(50, 30)
 #lblNome.setStyleSheet("font-size: 20px")
 
-lblLogin = QLabel("Login:", janela)
-lblLogin.move(50, 80)
+lblSubTitulo = QLabel("newsletter", janela)
+lblSubTitulo.move(50, 50)
+
+lblNome = QLabel("Nome:", janela)
+lblNome.move(50, 80)
 #lblLogin.setStyleSheet("font-size: 15px")
 
-txtLogin = QLineEdit("",janela)
-txtLogin.setGeometry(150, 80, 200, 20)
+txtNome = QLineEdit("",janela)
+txtNome.setGeometry(50, 100, 300, 50)
 #txtLogin.setStyleSheet("background-color: white")
 
-lblSenha = QLabel("Senha:", janela)
-lblSenha.move(50, 150)
+lblEmail = QLabel("E-mail:", janela)
+lblEmail.move(50, 170)
 #lblSenha.setStyleSheet("font-size: 15px")
 
-txtSenha = QLineEdit("", janela)
-txtSenha.setGeometry(150, 150, 200, 20)
+txtEmail = QLineEdit("", janela)
+txtEmail.setGeometry(50, 190, 300, 50)
 #txtSenha.setStyleSheet("background-color: white")
 
-btnEntrar = QPushButton("Entrar", janela)
-btnEntrar.setGeometry(50, 220, 300, 50)
+lblCpf = QLabel("CPF:", janela)
+lblCpf.move(50, 260)
+
+txtCpf = QLineEdit("", janela)
+txtCpf.setGeometry(50, 280, 300, 50)
+
+btnEntrar = QPushButton("Inscreva-se", janela)
+btnEntrar.setGeometry(50, 350, 300, 50)
 #btnEntrar.setStyleSheet("background-color: red; font-size: 20px; font-family: arial")
 
 # txt --> se refere a caixas de texto
