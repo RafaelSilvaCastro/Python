@@ -17,6 +17,8 @@ janela.setWindowTitle("Exemplo Interface")
 # chamar o css no python
 with open("style.css", "r") as file:
     app.setStyleSheet(file.read())
+    
+    
 
 lblNome = QLabel("Exemplo Tela", janela)
 lblNome.move(150, 30)
