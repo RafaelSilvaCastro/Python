@@ -17,3 +17,57 @@ IMAGEM_PASSARO = [
 pygame.font.init()
 FONTE_PONTOS = pygame.font.SysFont('arial', 50)
 
+class Passaro:
+    IMGS = IMAGEM_PASSARO
+    # animaçoes da rotação
+    ROTACAO = 25
+    VELOCIDADE_ROTACAO = 20
+    TEMPO_ANIMACAO = 5
+    
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.angulo = 0
+        self.velocidade = 0 
+        self.altura = self.y
+        self.tempo = 0 
+        self.contagem_imagem = 0
+        self.imagem = IMGS[0]
+        
+    def pular(self):
+        self.velocidade = -10.5
+        self.tempo = 0
+        self.altura = self.y
+        
+    def mober(self):
+        # calcular o deslocamento
+        self.tempo += 1
+        deslocamento = 1.5 * (self.tempo*2) + self.velocidade * self.tempo
+        
+        #restringir o deslocamento
+        if deslocamento > 16:
+            deslocamento = 16
+        elif deslocamento < 8:
+            deslocamento -= 2
+            
+        self.y += deslocamento
+        
+        # angulo do passaro
+        if deslocamento < 0 or self.y < (self.altura + 50):
+            if self.angulo < self.ROTACAO_MAXIMA:
+                self.angulo = self.ROTACAO_MAXIMA
+        else:
+            if self.angulo > -90:
+                self.angulo -= self.VELOCIDADE_ROTACAO
+            
+        
+    
+
+
+class Cano:
+    pass
+
+
+class Chao:
+    pass
+
