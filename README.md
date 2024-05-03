@@ -1,2 +1,2 @@
 # Python
- Arquivos e exercios do curso de Python
+ Arquivos e exercios de Python
