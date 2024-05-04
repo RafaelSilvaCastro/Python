@@ -17,7 +17,7 @@ janela.resize(330,480)
 janela.setWindowTitle("Calculadora")
 
 # chamar o css no python
-with open("python_senai/aula0405/style.css", "r") as file:
+with open("python_senai/aula0405/atividade_calculadora/style.css", "r") as file:
     app.setStyleSheet(file.read())
     
 
@@ -27,12 +27,18 @@ def exibirNoDisplay(x):
     colocarNoDisplay = valorDoDisplay + x 
     display.setText(colocarNoDisplay)
     
+#funçao para fazer o calculo
 def calcular():
     # funçao eval calcula um conhunto numerico
     resultado = eval(display.text())
     #print(resultado)
-    display.setText(resultado)
-
+    display.setText(str(resultado))
+    
+def limpar():
+    display.setText("")
+    
+    
+# criando a janela
 display = QLineEdit("",janela)
 display.setGeometry(50, 60, 230, 50)
 
@@ -70,7 +76,7 @@ btnSeis.clicked.connect(lambda: exibirNoDisplay('6'))
 btnMult = QPushButton("x", janela)
 btnMult.setGeometry(230, 190, 50, 50)
 btnMult.setStyleSheet("background-color: #BFFF00; font-size: 15px; font-family: Lucida Console")
-btnMult.clicked.connect(lambda: exibirNoDisplay('x'))
+btnMult.clicked.connect(lambda: exibirNoDisplay('*'))
 
 #terceira linha  
 btnSete= QPushButton("7", janela)
@@ -95,9 +101,9 @@ btnZero= QPushButton("0", janela)
 btnZero.setGeometry(50, 310, 50, 50)
 btnZero.clicked.connect(lambda: exibirNoDisplay('0'))
 
-btnVirgula = QPushButton(",", janela)
-btnVirgula.setGeometry(110, 310, 50, 50)
-btnVirgula.clicked.connect(lambda: exibirNoDisplay(','))
+btnponto = QPushButton(".", janela)
+btnponto.setGeometry(110, 310, 50, 50)
+btnponto.clicked.connect(lambda: exibirNoDisplay('.'))
 
 btnIgual = QPushButton("=", janela)
 btnIgual.setGeometry(170, 310, 50, 50)
@@ -109,9 +115,9 @@ btnSoma.setStyleSheet("background-color: #BFFF00; font-size: 15px; font-family: 
 btnSoma.clicked.connect(lambda: exibirNoDisplay('+'))
 
 #quinta linha
-btnMaisMenos= QPushButton("+/-", janela)
-btnMaisMenos.setGeometry(50, 370, 50, 50)
-btnMaisMenos.clicked.connect(lambda: exibirNoDisplay('+/-'))
+btnElevado= QPushButton("**", janela)
+btnElevado.setGeometry(50, 370, 50, 50)
+btnElevado.clicked.connect(lambda: exibirNoDisplay('**'))
 
 btnPorcentagem = QPushButton("%", janela)
 btnPorcentagem.setGeometry(110, 370, 50, 50)
@@ -120,6 +126,7 @@ btnPorcentagem.clicked.connect(lambda: exibirNoDisplay('%'))
 btnLimpar = QPushButton("C", janela)
 btnLimpar.setGeometry(170, 370, 110, 50)
 btnLimpar.setStyleSheet("background-color: #BFFF00; font-size: 25px; font-family: Lucida Console")
+btnLimpar.clicked.connect(limpar)
 
 
 
