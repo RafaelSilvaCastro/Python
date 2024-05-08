@@ -29,7 +29,7 @@ pyautogui.press("enter")
 time.sleep(3)
 
 # 2. Fazer login
-pyautogui.click(x=1162, y=437) # achar a posição da caixa de texto do email
+pyautogui.click(x=669, y=472) # achar a posição da caixa de texto do email
 pyautogui.write("rafael.castro@gmail.com")
 
 pyautogui.press("tab") # passou para o campo de senha
