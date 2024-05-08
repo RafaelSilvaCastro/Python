@@ -6,5 +6,9 @@ import time
 time.sleep(5)
 print(pyautogui.position())
 
+# funcionamento do scrool 
+# - vai pra baixo / + vai pra cima 
+pyautogui.scroll(250)
+
 # saber o nome das teclas
-print(pyautogui.KEYBOARD_KEYS)
+#print(pyautogui.KEYBOARD_KEYS)
