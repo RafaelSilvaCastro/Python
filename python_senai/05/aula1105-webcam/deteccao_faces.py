@@ -3,7 +3,7 @@
 
 import cv2 
 
-imagem_original = cv2.imread("python_senai/05/aula1105-webcam/midias/pessoas.jpg")
+imagem_original = cv2.imread("python_senai/05/aula1105-webcam/midias/cr7.jpg")
 
 # testar
 cv2.imshow("Pessoas", imagem_original)
