@@ -35,7 +35,7 @@ def abrirCamera():
 
 # criando os campos da tela  
 lblNome = QLabel("Monitoramento Veicular", janela)
-lblNome.move(100, 30)
+lblNome.move(90, 30)
 lblNome.setStyleSheet("font-size: 20px")
 
 lblNome = QLabel("Nome", janela)
