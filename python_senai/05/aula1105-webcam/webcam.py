@@ -3,7 +3,7 @@
 import cv2 
 
 # criando uma variavel para capiturar imagens(frames)
-# video = cv2.VideoCapture("python_senai/05/aula1105-webcam/video.mp4")
+# video = cv2.VideoCapture("python_senai/05/aula1105-webcam/midias/video.mp4")
 
 # pegando a camera do computador
 camera = cv2.VideoCapture(0)
