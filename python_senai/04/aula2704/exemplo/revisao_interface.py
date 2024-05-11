@@ -15,7 +15,7 @@ janela.setWindowTitle("Exemplo Interface")
 #janela.setStyleSheet("background-color: black; color: white; font-family: Lucida Console")
 
 # chamar o css no python
-with open("python_senai/aula2704/exemplo/style.css", "r") as file:
+with open("python_senai/04/aula2704/exemplo/style.css", "r") as file:
     app.setStyleSheet(file.read())
     
     
