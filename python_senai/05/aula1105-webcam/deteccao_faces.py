@@ -1,5 +1,5 @@
 # https://github.com/opencv/opencv/tree/master/data/haarcascades
-# pip install openv-python
+# pip install opencv-python
 # pip install pyqt6
 
 import cv2 

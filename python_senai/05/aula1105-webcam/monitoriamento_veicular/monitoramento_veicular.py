@@ -65,7 +65,7 @@ txtNome.setGeometry(150, 230, 200, 30)
 # criando o botao responsavel para abri a camera 
 btnEntrar = QPushButton("Abrir Câmera", janela)
 btnEntrar.setGeometry(90, 300, 230, 50)
-btnEntrar.clicked.connect(abrirCamera) # chamando a funçao para abrir a camera
+btnEntrar.clicked.connect(abrirCamera) # responsavel por chamar a funçao para abrir a camera
 
 
 # executando o monitoriamento
