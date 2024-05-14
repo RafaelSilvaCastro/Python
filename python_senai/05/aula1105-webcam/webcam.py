@@ -1,6 +1,6 @@
 # pip install opencv-python
 
-# Abrindo a camera e fazendo o reconecimento facil
+# Abrindo a camera e fazendo o reconhecimento facil
 
 import cv2 
 
