@@ -42,7 +42,7 @@ while True:
         if numero_saques > 3:
             print("Sua cota diaria de 3 saques foi ultrapassada!!!")  
         
-        elif valor_saque <= 500:
+        elif valor_saque <= limite:
             saldo -= valor_saque
             
         else:
