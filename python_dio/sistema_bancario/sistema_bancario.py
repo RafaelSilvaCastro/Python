@@ -49,7 +49,7 @@ while True:
             print("Valor não permitido pra saque!!!")
             
     elif opcao == 3:
-        print(f"O saldo atual e: R${saldo}")
+        print(f"O saldo atual e: R${saldo:.2f}")
         print("Exibindo o extrato:")   
         for val in extrato:
             if val > 0:
