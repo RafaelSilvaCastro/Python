@@ -2,6 +2,6 @@ sorteio = {1, 23}
 
 print(sorteio)  # {1, 23}
 
-sorteio.copy()
+sort = sorteio.copy()
 
-print(sorteio)  # {1, 23}
+print(sort)  # {1, 23}
