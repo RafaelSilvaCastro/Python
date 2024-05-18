@@ -24,8 +24,8 @@ def calcular_total_pago(transacoes):
 def solicitar_prestacao():
     """Solicita ao usuário o valor da prestação e os dias de atraso."""
     while True:
-        entrada = input("Digite o valor da prestação ou 'Fim de Programa' para encerrar: ")
-        if entrada.lower() == "fim de programa":
+        entrada = input("Digite o valor da prestação ou 'S' para encerrar: ")
+        if entrada.lower() == "s":
             return None, None
         
         try:
