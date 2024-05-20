@@ -1,15 +1,15 @@
 # salvar informações dos proprietarios de veiculos
 
 #cadastramento
-#def informacoes():
-pessoas = {
+def informacoes():
+    pessoas = {
         "OTM 2022": ["MARLON", "NEW CIVIC", 2022],
         "AAA-5551": ["ENZO", "GOLF", 2021],
         "ERM-5431": ["RAUL", "ECLIPSE", 2023],
         "XXX-0000": ["JONATHAN", "LANCER", 2022],
         "HQW-5678": ["GUSTAVO", "NEW BEATLE", 2023]
     }
-    #return pessoas
+    return pessoas
 
 # exibir todos os dados do dicionario (um em baixo do outro)
 for placa, cadastro in pessoas.items():
