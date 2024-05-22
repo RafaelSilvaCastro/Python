@@ -1,5 +1,5 @@
 import textwrap as txw
-
+import os
 
 def menu():
     menu = """
@@ -30,6 +30,7 @@ def depositar(saldo, valor, extrato, /):
     if valor > 0:
         saldo += valor  
         extrato += f"Depósito:R$ {valor:.2f}\n"
+        os.system('cls')
         print("\n---- Depósito realizado com sucesso! ----")
     else:
         print("\n---- Operação falhou! O valor informado e invalido. ----")    
@@ -142,7 +143,7 @@ def main():
     while True:
         menu()
         opcao = int(input("Digite a opção desejada: "))
-        
+        os.system('cls')
         if opcao == 1: # depositar
             valor = float(input("Digite a quantia que deseja depositar: "))
             
