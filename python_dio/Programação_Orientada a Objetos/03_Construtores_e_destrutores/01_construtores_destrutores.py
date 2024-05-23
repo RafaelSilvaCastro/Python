@@ -1,31 +1,29 @@
 class Cachorro:
+    # constructo que inicia a classe, executado no inicio
     def __init__(self, nome, cor, acordado=True):
-        print("Inicializando a classe...")
+        print("Iniciando a classe...")
         self.nome = nome
         self.cor = cor
         self.acordado = acordado
-
+        
+    # destructor de destroi a execução do objeto, executado no final
     def __del__(self):
-        print("Removendo a instância da classe.")
-
+        print("Removendo a instancia da classe.")
+        
     def falar(self):
         print("auau")
-
+        
 
 def criar_cachorro():
-    c = Cachorro("Zeus", "Branco e preto", False)
-    print(c.nome)
+    dog = Cachorro("Luciano", "cinza", False)
+    print(dog.nome)
+
+        
+dog = Cachorro("Caleri", "marrom")
+dog.falar()
+
+# forçar a parada de um objeto
+del dog
 
 
-c = Cachorro("Chappie", "amarelo")
-c.falar()
-
-print("Ola mundo")
-
-del c
-
-print("Ola mundo")
-print("Ola mundo")
-print("Ola mundo")
-
-# criar_cachorro()
+criar_cachorro()
