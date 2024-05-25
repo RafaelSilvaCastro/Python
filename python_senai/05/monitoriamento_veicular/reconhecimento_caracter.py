@@ -12,7 +12,7 @@ def reconhecer(imagem):
     # Leitura de imagem que contem textos
     placa = cv2.imread(imagem, 0)
 
-    # Converter/capturae textos da imagem
+    # Converter/capturar textos da imagem
     meus_textos = pytesseract.image_to_string(placa, config='1 eng --oem 3 --psm 12')
 
     # print(meus_textos)
@@ -20,9 +20,10 @@ def reconhecer(imagem):
 
 
 # Enviar uma imagem para função e exibir os textos reconhecidos
+# imagem = "python_senai/05/monitoriamento_veicular/placas/placa2.jpg"
 
-texto = reconhecer('python_senai/05/monitoriamento_veicular/placas/placa2.jpg')
-print(texto)
+# textosReconhecidos = reconhecer(imagem)
+# print(textosReconhecidos)
 
 
  

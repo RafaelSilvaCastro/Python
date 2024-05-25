@@ -17,12 +17,46 @@ dadosPessoas = dados.informacoes()
 import reconhecimento_caracter
 # criar uma função para reconhecer os caracteres
 def buscar():
-    print()
+    placaReconhecida = reconhecimento_caracter.reconhecer('python_senai/05/monitoriamento_veicular/placas/placa4.jpg') #mudar o caminho da imagem
     
-
+    # verificando se no meio dos textos reconhecidos tem a placa cadastrada
+    for p in dadosPessoas:
+        if p in placaReconhecida:
+            print(dadosPessoas[p][0])
+            
+# função para abrir camera
 def abrirCamera():
-    print()
-    
+    camera = cv2.VideoCapture(0) 
+    while True:
+        # mostrando a camera 
+        sucesso, frame = camera.read()  
+        cv2.imshow("imagem", frame)
+        
+        # verificar se na imagem capturada esta a nossa placa
+        # convertendo o frame em imagem
+        cv2.imwrite("python_senai/05/monitoriamento_veicular/placas/placaCapturada.jpg", frame) #mudar o caminho da imagem
+        placaReconhecida = reconhecimento_caracter.reconhecer("python_senai/05/monitoriamento_veicular/placas/placaCapturada.jpg") #mudar o caminho da imagem
+                
+        # loop para ahar o dono da placa
+        for p in dadosPessoas:
+            if p in placaReconhecida:
+                # exibindo as informações do dono do carro
+                #print(dadosPessoas[p][0])   
+                txtNome.setText(dadosPessoas[p][0])   
+                txtModelo.setText(dadosPessoas[p][1])  
+                txtPlaca.setText(str(p))  
+                txtAno.setText(str(dadosPessoas[p][2]))     
+   
+   
+  
+        
+        # para fechar a camera
+        if cv2.waitKey(1) & 0xFF == ord("s"):
+            break
+        
+    camera.release()
+    cv2.destroyAllWindows()
+        
     
 # criando a tela de monitoriamento veicular
 app = QApplication(sys.argv)
@@ -36,9 +70,9 @@ with open("python_senai/05/monitoriamento_veicular/style.css", "r") as file:
     
 
 # criando os campos da tela  
-lblNome = QLabel("Monitoramento Veicular", janela)
-lblNome.move(90, 30)
-lblNome.setStyleSheet("font-size: 20px")
+lblTitulo = QLabel("Monitoramento Veicular", janela)
+lblTitulo.move(90, 30)
+lblTitulo.setStyleSheet("font-size: 20px")
 
 lblNome = QLabel("Nome", janela)
 lblNome.move(50, 85)
@@ -49,20 +83,20 @@ txtNome.setGeometry(150, 80, 200, 30)
 lblModelo = QLabel("Modelo", janela)
 lblModelo.move(50, 135)
 
-txtNome = QLineEdit("",janela)
-txtNome.setGeometry(150, 130, 200, 30)
+txtModelo = QLineEdit("",janela)
+txtModelo.setGeometry(150, 130, 200, 30)
 
 lblPlaca = QLabel("Placa", janela)
 lblPlaca.move(50, 185)
 
-txtNome = QLineEdit("",janela)
-txtNome.setGeometry(150, 180, 200, 30)
+txtPlaca = QLineEdit("",janela)
+txtPlaca.setGeometry(150, 180, 200, 30)
 
 lblAno = QLabel("Ano Veículo", janela)
 lblAno.move(50, 235)
 
-txtNome = QLineEdit("",janela)
-txtNome.setGeometry(150, 230, 200, 30)
+txtAno = QLineEdit("",janela)
+txtAno.setGeometry(150, 230, 200, 30)
 
 # criando o botao responsavel para abri a camera 
 btnEntrar = QPushButton("Abrir Câmera", janela)
