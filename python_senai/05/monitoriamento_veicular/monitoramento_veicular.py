@@ -14,6 +14,7 @@ from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QLineEdi
 import dados
 dadosPessoas = dados.informacoes()
 
+import reconhecimento_caracter
 # criar uma função para reconhecer os caracteres
 def buscar():
     print()
