@@ -1,3 +1,6 @@
+# C:\Users\Aluno\AppData\Local\Programs\Tesseract-OCR\tesseract.exe
+
+
 # pip install opencv-python
 # pip install pyqt6
 
