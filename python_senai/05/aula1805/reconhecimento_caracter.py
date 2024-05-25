@@ -5,6 +5,7 @@ import pytesseract
 
 
 def reconhecer(imagem):
+       
     # Chamando por executavel de reconhecimentos de cacteres (biblioteca)
     pytesseract.pytesseract.tesseract_cmd=r"C:\Users\Aluno\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
 

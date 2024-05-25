@@ -9,6 +9,20 @@ import sys
 import cv2
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QLineEdit
 
+
+# trazendo os dados cadastrados para uso no projeto
+import dados
+dadosPessoas = dados.informacoes()
+
+# criar uma função para reconhecer os caracteres
+def buscar():
+    print()
+    
+
+def abrirCamera():
+    print()
+    
+    
 # criando a tela de monitoriamento veicular
 app = QApplication(sys.argv)
 janela = QWidget()
@@ -16,24 +30,8 @@ janela.resize(400,400)
 janela.setWindowTitle("Monitoramento Veicular")
 
 # chamar o css no python
-with open("python_senai/05/aula1105-webcam/monitoriamento_veicular/style.css", "r") as file:
+with open("python_senai/05/monitoriamento_veicular/style.css", "r") as file:
     app.setStyleSheet(file.read())
-    
-   
-def abrirCamera():
-    # pegando a camera do computador
-    camera = cv2.VideoCapture(0)
-
-    # loop para percorrer frame a frame, ou imagem por imagem
-    while True:
-        sucesso, frame = camera.read()
-        cv2.imshow("imagem video", frame)
-        
-        if cv2.waitKey(1) & 0xFF == ord("s"): # se a teclado do teclado for S ele sai do loop
-            break
-
-    camera.release()
-    cv2.destroyAllWindows()
     
 
 # criando os campos da tela  
