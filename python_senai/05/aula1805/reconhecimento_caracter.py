@@ -20,7 +20,7 @@ def reconhecer(imagem):
 
 # Enviar uma imagem para função e exibir os textos reconhecidos
 
-texto = reconhecer('aula1805/monitoramento_veicular/placa3.jpg')
+texto = reconhecer('python_senai/05/aula1805/placas/placa2.jpg')
 print(texto)
 
 
