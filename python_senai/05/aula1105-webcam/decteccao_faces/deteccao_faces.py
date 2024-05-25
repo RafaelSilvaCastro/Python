@@ -11,7 +11,7 @@ cv2.imshow("Sao Paulo Campeao CDB2023", imagem_original)
 cv2.waitKey(0)
 
 # carregar o arquivo treinado para detectar faces
-cascadeFace = cv2.CascadeClassifier("python_senai/05/aula1105-webcam/haarcascade_frontalface_default.xml")
+cascadeFace = cv2.CascadeClassifier("python_senai/05/haarcascade_frontalface_default.xml")
 
 # converter a imagem para tons de cinza
 imagemTonsDeCinza = cv2.cvtColor(imagem_original, cv2.COLOR_BGR2GRAY)
