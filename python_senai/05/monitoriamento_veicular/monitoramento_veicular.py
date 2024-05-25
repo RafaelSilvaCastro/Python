@@ -44,8 +44,8 @@ def abrirCamera():
                 #print(dadosPessoas[p][0])   
                 txtNome.setText(dadosPessoas[p][0])   
                 txtModelo.setText(dadosPessoas[p][1])  
-                txtPlaca.setText(str(p))  
-                txtAno.setText(str(dadosPessoas[p][2]))     
+                txtPlaca.setText(str(p)) # converte para texto
+                txtAno.setText(str(dadosPessoas[p][2])) # converte para texto  
         
         # para fechar a camera
         if cv2.waitKey(1) & 0xFF == ord("s"):
