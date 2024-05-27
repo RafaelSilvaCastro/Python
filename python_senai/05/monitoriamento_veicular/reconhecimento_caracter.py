@@ -7,7 +7,7 @@ import pytesseract
 def reconhecer(imagem):
        
     # Chamando por executavel de reconhecimentos de cacteres (biblioteca)
-    pytesseract.pytesseract.tesseract_cmd=r"C:\Users\Aluno\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
+    pytesseract.pytesseract.tesseract_cmd=r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
     # Leitura de imagem que contem textos
     placa = cv2.imread(imagem, 0)

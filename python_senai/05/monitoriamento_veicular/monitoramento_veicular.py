@@ -55,6 +55,14 @@ def abrirCamera():
     cv2.destroyAllWindows()
         
     
+#função para limpar os campos
+def limpar():
+    txtAno.setText("")
+    txtModelo.setText("")
+    txtNome.setText("")
+    txtPlaca.setText("")
+
+    
 # criando a tela de monitoriamento veicular
 app = QApplication(sys.argv)
 janela = QWidget()
@@ -97,9 +105,13 @@ txtAno.setGeometry(150, 230, 200, 30)
 
 # criando o botao responsavel para abri a camera 
 btnEntrar = QPushButton("Abrir Câmera", janela)
-btnEntrar.setGeometry(90, 300, 230, 50)
+btnEntrar.setGeometry(30, 300, 160, 50)
 btnEntrar.clicked.connect(abrirCamera) # responsavel por chamar a funçao para abrir a camera
 
+# criando o botao para limpar as informações
+btnLimpar = QPushButton("Limpar", janela)
+btnLimpar.setGeometry(200, 300, 160, 50)
+btnLimpar.clicked.connect(limpar)
 
 # executando o monitoriamento
 janela.show()

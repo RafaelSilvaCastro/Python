@@ -18,5 +18,5 @@ class Conta:
 
 conta = Conta("0001", 100)
 conta.depositar(100)
-print(conta.nro_agencia)
+print(conta.nro_agencia) 
 print(conta.mostrar_saldo())
