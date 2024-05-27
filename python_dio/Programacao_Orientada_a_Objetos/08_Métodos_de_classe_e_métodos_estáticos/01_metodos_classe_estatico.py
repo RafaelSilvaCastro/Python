@@ -6,9 +6,9 @@ class Peassoa:
       
     @classmethod  
     def criar_apartir_data_nascimento(cls, ano, mes, dia, nome):
-        # print(cls)
+        # print(cls) troca pelo self
         idade = 2024 - ano
-        return cls(nome, idade)   
+        return cls(nome, idade)   # cls e usado no lugar do Pessoa
     
     
     @staticmethod
