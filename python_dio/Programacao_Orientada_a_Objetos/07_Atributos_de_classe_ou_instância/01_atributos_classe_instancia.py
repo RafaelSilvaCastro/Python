@@ -1,23 +1,24 @@
 class Estudante:
-    escola = "DIO"
-
+    escola = "DIO" #variavel de classe
+    
     def __init__(self, nome, matricula):
         self.nome = nome
         self.matricula = matricula
-
-    def __str__(self) -> str:
+        
+        
+    def __str__(self):
         return f"{self.nome} - {self.matricula} - {self.escola}"
-
-
+    
+    
 def mostrar_valores(*objs):
     for obj in objs:
         print(obj)
 
 
-aluno_1 = Estudante("Guilherme", 1)
-aluno_2 = Estudante("Giovanna", 2)
-mostrar_valores(aluno_1, aluno_2)
+aluno1 = Estudante("Rafael", 1)
+aluno2 = Estudante("Ester", 2)
+mostrar_valores(aluno1, aluno2)
 
 Estudante.escola = "Python"
-aluno_3 = Estudante("Chappie", 3)
-mostrar_valores(aluno_1, aluno_2, aluno_3)
+aluno3 = Estudante("Jose", 3)
+mostrar_valores(aluno1, aluno2, aluno3)
