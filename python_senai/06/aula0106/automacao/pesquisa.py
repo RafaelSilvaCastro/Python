@@ -23,15 +23,15 @@ from selenium.webdriver.chrome.service import Service
 servico = Service(ChromeDriverManager().install())
 
 # criar uma variavel para usar o navegador 
-navegarGoogle = webdriver.Chrome(service=servico)
-navegarSenai = webdriver.Chrome(service=servico)
+# navegarGoogle = webdriver.Chrome(service=servico)
+# navegarSenai = webdriver.Chrome(service=servico)
 navegarMecadoLivre = webdriver.Chrome(service=servico)
 
 # abrindo o site do google
-navegarGoogle.get("https://www.google.com")
+# navegarGoogle.get("https://www.google.com")
 
 # abrindo o site do senai
-navegarSenai.get("https://sp.senai.br/unidade/mogidascruzes/")
+# navegarSenai.get("https://sp.senai.br/unidade/mogidascruzes/")
 
 # abrindo o site do mercado livre 
 navegarMecadoLivre.get("https://www.mercadolivre.com.br/")
@@ -44,6 +44,17 @@ navegarMecadoLivre.find_element('xpath', '//*[@id="cb1-edit"]').send_keys('noteb
 # /html/body/header/div/div[2]/form/button
 navegarMecadoLivre.find_element('xpath', '/html/body/header/div/div[2]/form/button').click()
 
+#  clicar no botao mais tarde do cep para fecha-lo
+# /html/body/div[3]/div/div/div[2]/div/div/div[2]/button[2]
+navegarMecadoLivre.find_element('xpath', '/html/body/div[3]/div/div/div[2]/div/div/div[2]/button[2]').click()
+
+# clicar no mais relevante
+#//*[@id=":R2m55e6:-trigger"]
+navegarMecadoLivre.find_element('xpath', '//*[@id=":R2m55e6:-trigger"]').click()
+
+# clicar no menor preço
+# //*[@id=":R2m55e6:-menu-list-option-price_asc"]/div/div/span
+navegarMecadoLivre.find_element('xpath', '//*[@id=":R2m55e6:-menu-list-option-price_asc"]/div/div/span').click()
 
 
 # pausa no programa
