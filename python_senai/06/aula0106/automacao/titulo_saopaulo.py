@@ -1,4 +1,4 @@
-# Automação mandar email
+# Automação abrir o video do titulo mundial do São Paulo de 2005
 # Biblioteca Selenium
 # Biblioteca webdriver
 # Baixar Chrome Driver
@@ -25,8 +25,18 @@ servico = Service(ChromeDriverManager().install())
 # criar uma variavel para usar o navegador 
 navegarEmail = webdriver.Chrome(service=servico)
 
-# abrindo o site do mercado livre 
-navegarEmail.get("www.youtube.com")
+# abrindo o site do youtube
+navegarEmail.get("https://www.youtube.com/")
+
+# pegar o botao de pesquisa, e escrever oque deseja
+# //*[@id="search-form"]
+navegarEmail.find_element('xpath', '//*[@id="search-form"]').send_keys('Mundial Sao Paulo')
+
+# botao de pesquisar
+# //*[@id="search-icon-legacy"]
+# navegarEmail.find_element('xpath', '//*[@id="search-icon-legacy"]').click()
+
+
 
 # pausa no programa
 input("Digite enter para fechar")
