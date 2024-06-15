@@ -4,7 +4,7 @@ def area(largura,comprimento):
     areaTerreno = largura*comprimento
     return areaTerreno
 
-largura = int(input('Dirigte a largura do terreno: '))
+largura = int(input('Digite a largura do terreno: '))
 comprimento = int(input('Digite o comprimento do terreno: '))
 print(f'A area do terreno e de: {area(largura,comprimento)}')
     

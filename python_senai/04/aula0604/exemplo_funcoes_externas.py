@@ -13,4 +13,5 @@ def calcularNumeroAoQuadrado(numero):
     potencia = numero * numero
     print(f'O numero ao quadrado e: {potencia}')
 
-    
+calcularRaiz(81)
+calcularNumeroAoQuadrado(10)
